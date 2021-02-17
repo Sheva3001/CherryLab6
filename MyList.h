@@ -6,43 +6,43 @@ using namespace std;
 template<typename T>
 class Array {
 public:
-// Типы
+// РўРёРїС‹
 	typedef T				value_type;
 	typedef T*				iterator;
 	typedef const T*		const_iterator;
 	typedef T&				reference;
 	typedef const T&		const_reference;
 	typedef size_t				size_type;
-// Конструкторы/копир./деструктор
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂС‹/РєРѕРїРёСЂ./РґРµСЃС‚СЂСѓРєС‚РѕСЂ
 	Array(const size_type& n = minsize);
 	Array(const Array& array);
 	~Array();
 	Array& operator=(const Array& right);
-// Итераторы
+// РС‚РµСЂР°С‚РѕСЂС‹
 	iterator begin() { return elems; }
 	const_iterator begin() const { return elems; }
 	iterator end() { return elems + Count; }
 	const_iterator end() const { return elems + Count; }
-// Размеры
-	size_type size() const;				// Текущий размер массива
-	bool empty() const;					// Есть ли элементы
-	size_t capacity() const;			// Потенциальный размер
-	void resize(size_type newsize);		// Изменить размер
-// Доступ к элементам
+// Р Р°Р·РјРµСЂС‹
+	size_type size() const;				// РўРµРєСѓС‰РёР№ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°
+	bool empty() const;					// Р•СЃС‚СЊ Р»Рё СЌР»РµРјРµРЅС‚С‹
+	size_t capacity() const;			// РџРѕС‚РµРЅС†РёР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ
+	void resize(size_type newsize);		// РР·РјРµРЅРёС‚СЊ СЂР°Р·РјРµСЂ
+// Р”РѕСЃС‚СѓРї Рє СЌР»РµРјРµРЅС‚Р°Рј
 	T& operator[](size_type index);
 	const T& operator[](size_type index) const;
 	reference front() { return elems[0]; }
 	const_reference front() const { return elems[0]; }
 	reference back() { return elems[size() - 1]; }
 	const_reference back() const { return elems[size() - 1]; }
-// Методы модификаторы
+// РњРµС‚РѕРґС‹ РјРѕРґРёС„РёРєР°С‚РѕСЂС‹
 	void push_back(const value_type& v);
-	void pop_back();											// Удалить последний элемент
-	void clear() { Count = 0; }									// Очистить массив
-	void assign();												// Заполнить массив
-	void push_to_position(const value_type& v, size_type& i);	// Вставка по номеру
+	void pop_back();											// РЈРґР°Р»РёС‚СЊ РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚
+	void clear() { Count = 0; }									// РћС‡РёСЃС‚РёС‚СЊ РјР°СЃСЃРёРІ
+	void assign();												// Р—Р°РїРѕР»РЅРёС‚СЊ РјР°СЃСЃРёРІ
+	void push_to_position(const value_type& v, size_type& i);	// Р’СЃС‚Р°РІРєР° РїРѕ РЅРѕРјРµСЂСѓ
 	void print();
-// Операторы
+// РћРїРµСЂР°С‚РѕСЂС‹
 	Array& operator+(const Array& a) {
 		if (size() == a.size()) {
 			for (int i = 0; i < a.size(); i++) {
@@ -121,10 +121,10 @@ public:
 			return 1;
 	}
 private:
-	static const size_type minsize = 10;	// Минимальный размер массива
-	size_type Size;							// Выделено элементов в памяти
-	size_type Count;						// Кол-во элементов в массиве
-	value_type* elems;						// Указатель на данные
+	static const size_type minsize = 10;	// РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°
+	size_type Size;							// Р’С‹РґРµР»РµРЅРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ РїР°РјСЏС‚Рё
+	size_type Count;						// РљРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°СЃСЃРёРІРµ
+	value_type* elems;						// РЈРєР°Р·Р°С‚РµР»СЊ РЅР° РґР°РЅРЅС‹Рµ
 };
 
 template<typename T>
@@ -218,7 +218,7 @@ inline void Array<T>::pop_back() {
 template<typename T>
 inline void Array<T>::assign() {
 	value_type temp; int s = 0;
-	cout << "Введите кол-во элементов" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЌР»РµРјРµРЅС‚РѕРІ" << endl;
 	cin >> s;
 	for (int i = 0; i < s; i++) {
 		cin >> temp;
