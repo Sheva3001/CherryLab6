@@ -10,12 +10,12 @@ int main() {
 	Array<int> B;
 	B.assign();
 	Array<int> C;
-	cout << "1. Ñëîæåíèå" << endl
-		<< "2. Âû÷èòàíèå" << endl
-		<< "3. Óìíîæåíèå" << endl
-		<< "4. Äåëåíèå" << endl
-		<< "5. Îñòàòîê îò äåëåíèÿ" << endl
-		<< "6. Ñðàâíåíèå" << endl;
+	cout << "1. Ð¡Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ" << endl
+		<< "2. Ð’Ñ‹Ñ‡Ð¸Ñ‚Ð°Ð½Ð¸Ðµ" << endl
+		<< "3. Ð£Ð¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ" << endl
+		<< "4. Ð”ÐµÐ»ÐµÐ½Ð¸Ðµ" << endl
+		<< "5. ÐžÑÑ‚Ð°Ñ‚Ð¾Ðº Ð¾Ñ‚ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ" << endl
+		<< "6. Ð¡Ñ€Ð°Ð²Ð½ÐµÐ½Ð¸Ðµ" << endl;
 	cin >> com;
 	switch (com)
 	{
@@ -41,11 +41,11 @@ int main() {
 		break;
 	case 6:
 		if (A < B)
-			cout << "Ìåíüøå" << endl;
+			cout << "ÐœÐµÐ½ÑŒÑˆÐµ" << endl;
 		else if (A > B)
-			cout << "Áîëüøå" << endl;
+			cout << "Ð‘Ð¾Ð»ÑŒÑˆÐµ" << endl;
 		else if (A == B)
-			cout << "Ðàâíû" << endl;
+			cout << "Ð Ð°Ð²Ð½Ñ‹" << endl;
 		break;
 	}
 	return 0;
